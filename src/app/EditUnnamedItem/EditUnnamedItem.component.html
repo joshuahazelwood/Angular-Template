@@ -1,0 +1,9 @@
+<h4> Placeholder 3 </h4>
+<ul class="unnamed">
+  <li *ngFor="let unnamed of Unnamed$ | async"
+    [class.selected]="unnamed.price === selectedPrice">
+    <a [routerLink]="['/unnamed', unnamed.price]">
+      <span class="badge">{{ unnamed.price }}</span>{{ unnamed.name }}
+    </a>
+  </li>
+</ul>   
