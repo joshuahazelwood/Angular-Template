@@ -10,20 +10,20 @@ import { MessageService } from '../message.service';
 @Injectable({
   providedIn: 'root',
 })
-export class HeroService {
+export class unnamedService {
 
   constructor(private messageService: MessageService) { }
 
-  getHeroes(): Observable<Hero[]> {
-    // TODO: send the message _after_ fetching the heroes
-    this.messageService.add('HeroService: fetched heroes');
-    return of(HEROES);
+  getunnamed(): Observable<unnamed[]> {
+    // TODO: send the message _after_ fetching the unnamed
+    this.messageService.add('unnamedService: fetched unnamed');
+    return of(UNNAMED);
   }
 
-  getHero(id: number | string) {
-    return this.getHeroes().pipe(
+  getUNNAMED(price: number | string) {
+    return this.getunnamed().pipe(
       // (+) before `id` turns the string into a number
-      map((heroes: Hero[]) => heroes.find(hero => hero.id === +id))
+      map((UNNAMED: unnamed[]) => UNNAMED.find(unnamed => unnamed.price === +price))
     );
   }
 }

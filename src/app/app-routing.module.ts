@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: 'first-component', component: FirstComponent },
   { path: 'second-component', component: SecondComponent },
   { path: 'EditUnnamedItem-component', component: EditUnnamedItemComponent},
-  { path: '',   redirectTo: '/first-component', pathMatch: 'full' },
+  { path: '',   redirectTo: '/EditUnnamedItem-component', pathMatch: 'full' },
   { path: '**', component:  PageNotFoundComponent},
 ]; // sets up routes constant where you define your routes
 
