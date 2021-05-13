@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs';
-import { unnamed } from '../EditUnnamedItem/EditUnnamedItem';
+import { unnamed } from '../EditUnnamedItem/EditItem';
 
 @Component({
   selector: 'app-EditUnnamedItem',
@@ -17,6 +17,7 @@ export class EditUnnamedItemComponent implements OnInit{
 
   constructor(
     private route: ActivatedRoute,
+    
   ) { }
 
   ngOnInit() {

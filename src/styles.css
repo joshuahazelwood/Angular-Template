@@ -3,7 +3,7 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
-  color: red;
+  color: black;
   font-size: 35pt;
 }
 h2 {
@@ -17,7 +17,7 @@ h3 {
   font-size: 15pt;
 }
 h4 {
-  color: purple;
+  color: red;
   font-weight: lighter;
   font-size: 15pt;
 }
@@ -88,4 +88,9 @@ input[type="text"] {
   box-sizing: border-box;
   width: 100%;
   padding: .5rem;
+}
+.center {
+  display: flex; 
+  justify-content:center; 
+  align-items: center;
 }
