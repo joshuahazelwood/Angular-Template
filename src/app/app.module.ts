@@ -6,14 +6,14 @@ import { AppRoutingModule } from './app-routing.module'; // CLI imports AppRouti
 import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
-import { EditUnnamedItemComponent } from './EditUnnamedItem/EditUnnamedItem.component';
+
 import { PageNotFoundComponent } from './Page-Not-Found/Page-Not-Found.component';
 
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRoutingModule],
   declarations: [ AppComponent, FirstComponent, SecondComponent, 
-  EditUnnamedItemComponent, PageNotFoundComponent],
+  , PageNotFoundComponent],
   providers:    [ ],
   bootstrap:    [ AppComponent ]
 })
