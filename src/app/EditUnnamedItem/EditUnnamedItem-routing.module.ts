@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { EditUnnamedComponent } from '.Editable-List/EditUnnamedItem.component';
+import { EditUnnamedComponent } from '.EditableList/EditUnnamedItem.component';
 
 
 const UnnamedRoutes: Routes = [
