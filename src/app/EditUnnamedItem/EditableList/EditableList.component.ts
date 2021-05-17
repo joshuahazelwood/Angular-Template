@@ -31,3 +31,7 @@ export class EditUnnamedItemComponent implements OnInit{
   }
 
 }
+
+export interface editbutton {
+  data: any;
+}

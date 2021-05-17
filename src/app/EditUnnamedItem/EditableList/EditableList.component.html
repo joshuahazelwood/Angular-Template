@@ -2,8 +2,21 @@
 <ul class="unnamed">
   <li *ngFor="let unnamed of Unnamed$ | async"
     [class.selected]="unnamed.price === selectedPrice">
-    <a [routerLink]="['/unnamed', unnamed.price]">
-      <span class="badge">{{ unnamed.price }}</span>{{ unnamed.name }}
-    </a>
+      
+      <span >ID: {{ unnamed.price }} -- </span>{{ unnamed.name }} 
+      <p style="font-size:1px;line-height:1;"><br/></p>
+    
+    <h3>
+      <div >
+        <label >Name: </label>
+        <input [(ngModel)]="unnamed.name" placeholder="name"/>
+        <p style="font-size:2px;line-height:1;"><br/></p> 
+      </div>
+      <div >
+        <label >ID: </label>
+        <input [(ngModel)]="unnamed.price" placeholder="ID"/>
+        <p style="font-size:7px;line-height:1;"><br/></p>
+      </div>
+    </h3>
   </li>
 </ul>

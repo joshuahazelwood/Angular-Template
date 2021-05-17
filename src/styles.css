@@ -13,9 +13,9 @@ h2 {
   font-size: 15pt;
 }
 h3 {
-  color: orange;
+  color: black;
   font-weight: lighter;
-  font-size: 15pt;
+  font-size: 12pt;
 }
 h4 {
   color: red;
@@ -94,4 +94,11 @@ input[type="text"] {
   display: flex; 
   justify-content:center; 
   align-items: center;
+}
+.align-right {
+  text-align: right;
+}
+
+.align-middle {
+  text-align: middle;
 }
