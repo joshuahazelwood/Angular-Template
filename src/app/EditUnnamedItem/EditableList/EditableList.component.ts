@@ -16,6 +16,11 @@ export class EditUnnamedItemComponent implements OnInit{
   Unnamed$: Observable<unnamed[]>;
   selectedPrice: number;
 
+  showDiv = {
+    price : false,
+    name : false, 
+  }
+
   constructor(
     private route: ActivatedRoute,
     private service: unnamedService,
@@ -31,6 +36,8 @@ export class EditUnnamedItemComponent implements OnInit{
   }
 
 }
+
+
 
 export interface editbutton {
   data: any;

@@ -1,21 +1,22 @@
-<h2>Place Holder 3</h2>
-<ul class="unnamed">
+
+<h2>Placeholder 3</h2>
+<ul>
   <li *ngFor="let unnamed of Unnamed$ | async"
     [class.selected]="unnamed.price === selectedPrice">
+
+      <button (click)="showDiv.price = !showDiv.price; showDiv.name = !showDiv.name">
+      Element1:  {{ unnamed.price }} -- Element2: {{ unnamed.name }}</button>
       
-      <span >ID: {{ unnamed.price }} -- </span>{{ unnamed.name }} 
-      <p style="font-size:1px;line-height:1;"><br/></p>
-    
     <h3>
-      <div >
-        <label >Name: </label>
-        <input [(ngModel)]="unnamed.name" placeholder="name"/>
-        <p style="font-size:2px;line-height:1;"><br/></p> 
-      </div>
-      <div >
+      <div *ngIf="showDiv.price">
         <label >ID: </label>
         <input [(ngModel)]="unnamed.price" placeholder="ID"/>
-        <p style="font-size:7px;line-height:1;"><br/></p>
+        <p style="font-size:3px;line-height:1;"><br/></p>
+      </div>
+      <div *ngIf="showDiv.name">
+        <label >Name: </label>
+        <input [(ngModel)]="unnamed.name" placeholder="name"/>
+        <p style="font-size:0px;line-height:1;"><br/></p> 
       </div>
     </h3>
   </li>
