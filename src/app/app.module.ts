@@ -9,10 +9,10 @@ import { SecondComponent } from './second/second.component';
 
 import { PageNotFoundComponent } from './Page-Not-Found/Page-Not-Found.component';
 
-import { EditItemModule } from './EditUnnamedItem/EditItem.module';
+import { UnnamedModule } from './EditUnnamedItem/EditItem.module';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, AppRoutingModule, EditItemModule ],
+  imports:      [ BrowserModule, FormsModule, AppRoutingModule, UnnamedModule ],
   declarations: [ AppComponent, FirstComponent, SecondComponent, PageNotFoundComponent],
   providers:    [ ],
   bootstrap:    [ AppComponent ]
