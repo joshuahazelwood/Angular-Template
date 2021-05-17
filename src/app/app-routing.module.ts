@@ -5,6 +5,8 @@ import { FirstComponent } from './first/first.component';
 import { PageNotFoundComponent } from './Page-Not-Found/Page-Not-Found.component';
 import { SecondComponent } from './second/second.component';
 
+import { SelectivePreloadingStrategyService } from './selective-preloading-strategy.service';
+
 const routes: Routes = [
   { path: 'first-component', component: FirstComponent },
   { path: 'second-component', component: SecondComponent },
@@ -15,7 +17,15 @@ const routes: Routes = [
 
 // configures NgModule imports and exports
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(
+      Routes,
+      {
+        enableTracing: false, // <-- debugging purposes only
+        preloadingStrategy: SelectivePreloadingStrategyService,
+      }
+    )
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
