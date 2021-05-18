@@ -8,16 +8,13 @@ import { take } from 'rxjs/operators';
   templateUrl: './first.component.html',
   styleUrls: ['./first.component.css']
 })
-export class FirstComponent{
+export class FirstComponent implements OnInit{
   header="Placeholder 1";
 
-  constructor(private _FirstComponent: NgZone) { }
+  constructor() { }
 
-  @ViewChild('autosize') autosize: CdkTextareaAutosize;
-
-  triggerResize() {
-    // Wait for changes to be applied, then trigger textarea resize.
-    this._FirstComponent.onStable.pipe(take(1))
-        .subscribe(() => this.autosize.resizeToFitContent(true));
+  ngOnInit() {
   }
+
+  
 }

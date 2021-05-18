@@ -5,6 +5,7 @@ import { switchMap } from 'rxjs/operators';
 
 import { unnamedService } from '../../EditUnnamedItem/Edit.service';
 import { unnamed } from '../EditItem';
+import { titles } from '../EditItem';
 
 
 @Component({
@@ -15,9 +16,11 @@ import { unnamed } from '../EditItem';
 
 export class EditUnnamedItemComponent implements OnInit{
   Unnamed$: Observable<unnamed[]>;
+  Titles$: Observable<titles[]>;
   selectedelement2: number;
+  selectedelement3: string;
 
-  title="Placeholder 3";
+  
 
   showDiv = {
     element2 : false,

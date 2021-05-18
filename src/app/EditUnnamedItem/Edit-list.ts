@@ -1,4 +1,4 @@
-import { unnamed } from './EditItem';
+import { unnamed, titles } from './EditItem';
 
 export const UNNAMED: unnamed[] = [
   {element2: 1, element1: 'blank1' },
@@ -12,3 +12,7 @@ export const UNNAMED: unnamed[] = [
   {element2: 9, element1: 'blank9' },
   {element2: 10, element1: 'blank10' }
 ];
+
+export const TITLES: titles[] = [
+  {header3: "Placeholder 3"},
+]
