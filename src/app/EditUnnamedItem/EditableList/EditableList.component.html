@@ -1,16 +1,16 @@
 
+<div *ngFor="let titles of Titles$ | async"  
+  [class.selected]="titles.element3 === selectedelement3">
 
-<ul> 
-  <div *ngFor="let titles of Titles$ | async"  
-    [class.selected]="titles.element3 === selectedelement3">
+    <button (click)="showDiv.header3 = !showDiv.header3"> {{titles.header3}}</button>
 
-      <button (click)="showDiv.header3 = !showDiv.header3"> {{titles.header3}} </button>
-
-    <div *ngIf="showDiv.header3">
-      <input [(ngModel)]="titles.header3" placeholder="title"/>
-    </div>
+  <div *ngIf="showDiv.header3">
+    <input [(ngModel)]="titles.header3" placeholder="title"/>
   </div>
-</ul> 
+
+  
+</div> 
+
 
 <ul >
   <div *ngFor="let unnamed of Unnamed$ | async"
