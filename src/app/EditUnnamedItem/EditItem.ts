@@ -1,4 +1,4 @@
 export interface unnamed {
-  name: string;
-  price: number;
+  element1: string;
+  element2: number;
 }

@@ -1,5 +1,5 @@
 
-<h2>{{title}}</h2>
+<span class="badge"><h2>{{title}}</h2></span>
 <button (click)="showDiv.title = !showDiv.title"> Enter New Title: </button>
 
 <div *ngIf="showDiv.title">
@@ -9,21 +9,21 @@
 
 <ul >
   <li *ngFor="let unnamed of Unnamed$ | async"
-    [class.selected]="unnamed.price === selectedPrice">
+    [class.selected]="unnamed.element2 === selectedelement2">
 
-      <button (click)="showDiv.price = !showDiv.price; showDiv.name = !showDiv.name">
-      Element1:  {{ unnamed.price }} -- Element2: {{ unnamed.name }}</button>
+      <button (click)="showDiv.element2 = !showDiv.element2; showDiv.element1 = !showDiv.element1">
+      Element1:  {{ unnamed.element1 }} -- Element2: {{ unnamed.element2 }}</button>
       
     <h3>
-      <div *ngIf="showDiv.price">
-        <label >ID: </label>
-        <input [(ngModel)]="unnamed.price" placeholder="ID"/>
-        <p style="font-size:3px;line-height:1;"><br/></p>
-      </div>
-      <div *ngIf="showDiv.name">
-        <label >Name: </label>
-        <input [(ngModel)]="unnamed.name" placeholder="name"/>
+      <div *ngIf="showDiv.element1">
+        <label >Element1: </label>
+        <input [(ngModel)]="unnamed.element1" placeholder="element1"/>
         <p style="font-size:0px;line-height:1;"><br/></p> 
+      </div>
+      <div *ngIf="showDiv.element2">
+        <label >Element2: </label>
+        <input [(ngModel)]="unnamed.element2" placeholder="ID"/>
+        <p style="font-size:3px;line-height:1;"><br/></p>
       </div>
     </h3>
         

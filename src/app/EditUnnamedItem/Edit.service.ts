@@ -20,10 +20,10 @@ export class unnamedService {
     return of(UNNAMED);
   }
 
-  getUNNAMED(price: number | string) {
+  getUNNAMED(element2: number | string) {
     return this.getunnamed().pipe(
       
-      map((UNNAMED: unnamed[]) => UNNAMED.find(unnamed => unnamed.price === +price))
+      map((UNNAMED: unnamed[]) => UNNAMED.find(unnamed => unnamed.element2 === +element2))
     );
   }
 }

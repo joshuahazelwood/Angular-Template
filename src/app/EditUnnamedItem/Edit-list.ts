@@ -1,14 +1,14 @@
 import { unnamed } from './EditItem';
 
 export const UNNAMED: unnamed[] = [
-  {price: 1, name: 'blank1' },
-  {price: 2, name: 'blank2' },
-  {price: 3, name: 'blank3' },
-  {price: 4, name: 'blank4' },
-  {price: 5, name: 'blank5' },
-  {price: 6, name: 'blank6' },
-  {price: 7, name: 'blank7' },
-  {price: 8, name: 'blank8' },
-  {price: 9, name: 'blank9' },
-  {price: 10, name: 'blank10' }
+  {element2: 1, element1: 'blank1' },
+  {element2: 2, element1: 'blank2' },
+  {element2: 3, element1: 'blank3' },
+  {element2: 4, element1: 'blank4' },
+  {element2: 5, element1: 'blank5' },
+  {element2: 6, element1: 'blank6' },
+  {element2: 7, element1: 'blank7' },
+  {element2: 8, element1: 'blank8' },
+  {element2: 9, element1: 'blank9' },
+  {element2: 10, element1: 'blank10' }
 ];

@@ -9,7 +9,7 @@ import {UNNAMED}from '.././EditUnnamedItem/Edit-list';
 })
 export class SecondComponent implements OnInit{
   
-  
+  header="Placeholder 2";
 
   constructor() { }
 
