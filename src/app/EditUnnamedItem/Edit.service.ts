@@ -27,14 +27,16 @@ export class unnamedService {
     );
   }
 }
-
+@Injectable({
+  providedIn: 'root',
+})
 export class titlesService {
 
-  constructor(private messageService: MessageService) { }
+  constructor(private messageService2: MessageService) { }
 
   gettitles(): Observable<titles[]> {
     
-    this.messageService.add('titlesService: fetched titles');
+    this.messageService2.add('titlesService: fetched titles');
     return of(TITLES);
   }
 
