@@ -40,18 +40,14 @@ export class EditUnnamedItemComponent implements OnInit{
        return this.service.getunnamed();
       })
     );
-  } 
-  
-  ng2OnInit() {
+    
     this.Titles$ = this.route.paramMap.pipe(
      switchMap(params => {
        this.selectedelement3 = +params.get('element3');
        return this.service2.gettitles();
       })
     );
-  } 
-  
-
+  }
 }
 
 
