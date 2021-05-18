@@ -1,5 +1,12 @@
 
-<h2>Placeholder 3</h2>
+<h2>{{title}}</h2>
+<button (click)="showDiv.title = !showDiv.title"> Enter New Title: </button>
+
+<div *ngIf="showDiv.title">
+  <input [(ngModel)]=title/>
+</div>
+
+
 <ul >
   <li *ngFor="let unnamed of Unnamed$ | async"
     [class.selected]="unnamed.price === selectedPrice">
@@ -19,5 +26,7 @@
         <p style="font-size:0px;line-height:1;"><br/></p> 
       </div>
     </h3>
+        
   </li>
+  
 </ul>

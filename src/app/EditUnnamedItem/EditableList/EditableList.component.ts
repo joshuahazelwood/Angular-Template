@@ -1,10 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 import { unnamedService } from '../../EditUnnamedItem/Edit.service';
 import { unnamed } from '../EditItem';
+
 
 @Component({
   selector: 'app-EditableList',
@@ -16,10 +17,15 @@ export class EditUnnamedItemComponent implements OnInit{
   Unnamed$: Observable<unnamed[]>;
   selectedPrice: number;
 
+  title="Placeholder 3";
+
   showDiv = {
     price : false,
     name : false, 
+    title: false
   }
+  
+  
 
   constructor(
     private route: ActivatedRoute,
@@ -38,7 +44,3 @@ export class EditUnnamedItemComponent implements OnInit{
 }
 
 
-
-export interface editbutton {
-  data: any;
-}

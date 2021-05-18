@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-first',
@@ -6,6 +7,7 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements OnInit{
+  header="Placeholder 1";
 
   constructor() { }
 
