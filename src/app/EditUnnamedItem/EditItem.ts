@@ -4,5 +4,6 @@ export interface unnamed {
 }
 
 export interface titles {
+  element3: number;
   header3: string;
 }

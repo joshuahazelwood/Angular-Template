@@ -1,12 +1,14 @@
-<div *ngFor="let titles of Titles$ | async"  
-  [class.selected]="titles.header3 === selectedelement3">
-  <h2>{{titles.header3}}</h2>
-  <button (click)="showDiv.header3 = !showDiv.header3"> Enter New Title: </button>
+ <ul> 
+  <div *ngFor="let titles of Titles$ | async"  
+    [class.selected]="titles.element3 === selectedelement3">
 
-  <div *ngIf="showDiv.header3">
-    <input [(ngModel)]="header3" placeholder="title"/>
+      <button (click)="showDiv.header3 = !showDiv.header3"> {{titles.header3}} </button>
+
+    <div *ngIf="showDiv.header3">
+      <input [(ngModel)]="titles.header3" placeholder="title"/>
+    </div>
   </div>
-</div>
+</ul> 
 
 <ul >
   <div *ngFor="let unnamed of Unnamed$ | async"

@@ -3,10 +3,9 @@ import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
-import { unnamedService } from '../../EditUnnamedItem/Edit.service';
+import { unnamedService, titlesService } from '../../EditUnnamedItem/Edit.service';
 import { unnamed } from '../EditItem';
 import { titles } from '../EditItem';
-
 
 @Component({
   selector: 'app-EditableList',
@@ -18,21 +17,20 @@ export class EditUnnamedItemComponent implements OnInit{
   Unnamed$: Observable<unnamed[]>;
   Titles$: Observable<titles[]>;
   selectedelement2: number;
-  selectedelement3: string;
-
+  selectedelement3: number;
   
 
   showDiv = {
     element2 : false,
     element1 : false, 
-    title: false
+    header3: false,
+    element3: false,
   }
-  
-  
 
   constructor(
     private route: ActivatedRoute,
     private service: unnamedService,
+    private service2: titlesService
   ) { }
 
   ngOnInit() {
@@ -42,7 +40,17 @@ export class EditUnnamedItemComponent implements OnInit{
        return this.service.getunnamed();
       })
     );
-  }
+  } 
+  
+  ng2OnInit() {
+    this.Titles$ = this.route.paramMap.pipe(
+     switchMap(params => {
+       this.selectedelement3 = +params.get('element3');
+       return this.service2.gettitles();
+      })
+    );
+  } 
+  
 
 }
 
