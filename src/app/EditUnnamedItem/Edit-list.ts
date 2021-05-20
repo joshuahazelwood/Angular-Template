@@ -14,6 +14,5 @@ export const UNNAMED: unnamed[] = [
 ];
 
 export const TITLES: titles[] = [
-  {element3: 1, header3: 'Placeholder 3'},
-  {element3: 2, header3: 'Placeholder 2'},
+  {element3: 1, header: 'Placeholder 3'},
 ];

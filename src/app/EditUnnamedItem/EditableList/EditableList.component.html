@@ -2,10 +2,10 @@
 <div *ngFor="let titles of Titles$ | async"  
   [class.selected]="titles.element3 === selectedelement3">
 
-    <button (click)="showDiv.header3 = !showDiv.header3"> {{titles.header3}}</button>
+    <button (click)="showDiv.header = !showDiv.header"> {{titles.header}}</button>
 
-  <div *ngIf="showDiv.header3">
-    <input [(ngModel)]="titles.header3" placeholder="title"/>
+  <div *ngIf="showDiv.header">
+    <input [(ngModel)]="titles.header" placeholder="title"/>
   </div>
 
   

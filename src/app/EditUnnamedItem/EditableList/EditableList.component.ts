@@ -23,7 +23,7 @@ export class EditUnnamedItemComponent implements OnInit{
   showDiv = {
     element2 : false,
     element1 : false, 
-    header3: false,
+    header: false,
     element3: false,
   }
 
